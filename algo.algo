@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+    str :  STRING
+    nbr_espace : INTEGER := 1
+    nbr_voyelles , i : INTEGER := 1
+
+BEGIN
+    read(str)
+    write ("length :" , str.length)
+    "hello from gomycode there."
+FOR i FROM 0 TO str.length - 2 STEP 1  DO
+    IF (str[i] = " " ) THEN
+        nbr_espace := nbr_espace + 1
+    END_IF
+
+    SWITCH (str[i]) DO
+        case "a" : nbr_voyelles := nbr_espace + 1
+        case "A" : nbr_voyelles := nbr_espace + 1
+
+
+    END_SWITCH
+
+    
+END_FOR
+
+write(nbr_espace , nbr_voyelles , str.length)
+
+END
